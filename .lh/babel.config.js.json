@@ -1,0 +1,22 @@
+{
+    "sourceFile": "babel.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1644736534254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644736890660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,14 @@\n+let prodPlugins =[]\n+if(process.env.NODE_ENV === 'production'){\n+  prodPlugins.push('transform-remove-console')\n+}else if(process.env.NODE_ENV === 'development'){\n+\n+}\n module.exports = {\n   presets: [\n     '@vue/cli-plugin-babel/preset'\n   ],\n   plugins:[\n-    'transform-remove-console'\n+    ...prodPlugins\n   ]\n }\n"
+                }
+            ],
+            "date": 1644736534254,
+            "name": "Commit-0",
+            "content": "module.exports = {\n  presets: [\n    '@vue/cli-plugin-babel/preset'\n  ],\n  plugins:[\n    'transform-remove-console'\n  ]\n}\n"
+        }
+    ]
+}

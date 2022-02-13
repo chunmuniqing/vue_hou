@@ -1,0 +1,110 @@
+{
+    "sourceFile": "src/main_prod.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 23,
+            "patches": [
+                {
+                    "date": 1644748521424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644749263364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n import './assets/fonts/iconfont.css'\n import * as fn from './plugins/index'\n \n import VueQuillEditor from 'vue-quill-editor'\n-import 'nprogress/nprogress.css'\n+// import 'nprogress/nprogress.css'\n // require styles\n // import 'quill/dist/quill.core.css'\n // import 'quill/dist/quill.snow.css'\n // import 'quill/dist/quill.bubble.css'\n"
+                },
+                {
+                    "date": 1644750105383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,13 @@\n import './assets/fonts/iconfont.css'\n import * as fn from './plugins/index'\n \n import VueQuillEditor from 'vue-quill-editor'\n-// import 'nprogress/nprogress.css'\n-// require styles\n-// import 'quill/dist/quill.core.css'\n-// import 'quill/dist/quill.snow.css'\n-// import 'quill/dist/quill.bubble.css'\n+import 'nprogress/nprogress.css'\n+require styles\n+import 'quill/dist/quill.core.css'\n+import 'quill/dist/quill.snow.css'\n+import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n Vue.use(ElementUI);\n Vue.component('tree-table',treeTable)\n"
+                },
+                {
+                    "date": 1644750114718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n import * as fn from './plugins/index'\n \n import VueQuillEditor from 'vue-quill-editor'\n import 'nprogress/nprogress.css'\n-require styles\n+// require styles\n import 'quill/dist/quill.core.css'\n import 'quill/dist/quill.snow.css'\n import 'quill/dist/quill.bubble.css'\n \n"
+                },
+                {
+                    "date": 1644750250873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n import './assets/fonts/iconfont.css'\n import * as fn from './plugins/index'\n \n import VueQuillEditor from 'vue-quill-editor'\n-import 'nprogress/nprogress.css'\n+// import 'nprogress/nprogress.css'\n // require styles\n import 'quill/dist/quill.core.css'\n import 'quill/dist/quill.snow.css'\n import 'quill/dist/quill.bubble.css'\n"
+                },
+                {
+                    "date": 1644750834582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import Vue from \"vue\";\n import App from \"./App.vue\";\n import router from \"./router\";\n-import ElementUI from \"element-ui\";\n+// import ElementUI from \"element-ui\";\n import treeTable from 'vue-table-with-tree-grid'\n import api from './api/api.js'\n import \"/node_modules/element-ui/lib/theme-chalk/index.css\";\n import \"./assets/reset.css\";\n"
+                },
+                {
+                    "date": 1644750979690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n import 'quill/dist/quill.snow.css'\n import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-Vue.use(ElementUI);\n+// Vue.use(ElementUI);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n   const y = dt.getFullYear();\n"
+                },
+                {
+                    "date": 1644750985435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n import 'quill/dist/quill.snow.css'\n import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-// Vue.use(ElementUI);\n+Vue.use(ElementUI);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n   const y = dt.getFullYear();\n"
+                },
+                {
+                    "date": 1644751035091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n import 'quill/dist/quill.snow.css'\n import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-Vue.use(ElementUI);\n+// Vue.use(ElementUI);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n   const y = dt.getFullYear();\n"
+                },
+                {
+                    "date": 1644751241638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import router from \"./router\";\n // import ElementUI from \"element-ui\";\n import treeTable from 'vue-table-with-tree-grid'\n import api from './api/api.js'\n-import \"/node_modules/element-ui/lib/theme-chalk/index.css\";\n+// import \"/node_modules/element-ui/lib/theme-chalk/index.css\";\n import \"./assets/reset.css\";\n import './assets/fonts/iconfont.css'\n import * as fn from './plugins/index'\n \n"
+                },
+                {
+                    "date": 1644751948941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,17 +8,17 @@\n import \"./assets/reset.css\";\n import './assets/fonts/iconfont.css'\n import * as fn from './plugins/index'\n \n-import VueQuillEditor from 'vue-quill-editor'\n+// import VueQuillEditor from 'vue-quill-editor'\n // import 'nprogress/nprogress.css'\n // require styles\n-import 'quill/dist/quill.core.css'\n-import 'quill/dist/quill.snow.css'\n-import 'quill/dist/quill.bubble.css'\n+// import 'quill/dist/quill.core.css'\n+// import 'quill/dist/quill.snow.css'\n+// import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-// Vue.use(ElementUI);\n+Vue.use(ElementUI);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n   const y = dt.getFullYear();\n"
+                },
+                {
+                    "date": 1644763834497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n // import 'quill/dist/quill.snow.css'\n // import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-Vue.use(ElementUI);\n+Vue.use(ELEMENT);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n   const y = dt.getFullYear();\n"
+                },
+                {
+                    "date": 1644764128470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n // import 'quill/dist/quill.snow.css'\n // import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n+// \n Vue.use(ELEMENT);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n"
+                },
+                {
+                    "date": 1644764134084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n // import 'quill/dist/quill.snow.css'\n // import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-// \n+// Elementui引入,\n Vue.use(ELEMENT);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n"
+                },
+                {
+                    "date": 1644764139654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n // import 'quill/dist/quill.snow.css'\n // import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-// Elementui引入,\n+// Elementui引入,把\n Vue.use(ELEMENT);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n"
+                },
+                {
+                    "date": 1644764145246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n // import 'quill/dist/quill.snow.css'\n // import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-// Elementui引入,把\n+// Elementui引入,把引入的\n Vue.use(ELEMENT);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n"
+                },
+                {
+                    "date": 1644764153604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n // import 'quill/dist/quill.snow.css'\n // import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-// Elementui引入,把引入的\n+// Elementui引入,把引入的elemenui和css注释掉\n Vue.use(ELEMENT);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n"
+                },
+                {
+                    "date": 1644764161962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n // import 'quill/dist/quill.snow.css'\n // import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-// Elementui引入,把引入的elemenui和css注释掉\n+// Elementui引入,把引入的elemenui和css注释掉,Vue.use(ELEMENT)\n Vue.use(ELEMENT);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n"
+                },
+                {
+                    "date": 1644764170657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n // import 'quill/dist/quill.snow.css'\n // import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-// Elementui引入,把引入的elemenui和css注释掉,Vue.use(ELEMENT)\n+// Elementui引入,1把引入的elemenui和css注释掉,2Vue.use(ELEMENT)3在index.html中\n Vue.use(ELEMENT);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n"
+                },
+                {
+                    "date": 1644764179572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n // import 'quill/dist/quill.snow.css'\n // import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-// Elementui引入,1把引入的elemenui和css注释掉,2Vue.use(ELEMENT)3在index.html中\n+// Elementui引入,1把引入的elemenui和css注释掉,2Vue.use(ELEMENT)3在index.html中引入js和css,vuede\n Vue.use(ELEMENT);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n"
+                },
+                {
+                    "date": 1644764187227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n // import 'quill/dist/quill.snow.css'\n // import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-// Elementui引入,1把引入的elemenui和css注释掉,2Vue.use(ELEMENT)3在index.html中引入js和css,vuede\n+// Elementui引入,1把引入的elemenui和css注释掉,2Vue.use(ELEMENT)3在index.html中引入js和css,vue的在它前面引入\n Vue.use(ELEMENT);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n"
+                },
+                {
+                    "date": 1644764218399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,20 @@\n // import 'quill/dist/quill.snow.css'\n // import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-// Elementui引入,1把引入的elemenui和css注释掉,2Vue.use(ELEMENT)3在index.html中引入js和css,vue的在它前面引入\n+// Elementui引入,1把引入的elemenui和css注释掉,2Vue.use(ELEMENT)3在index.html中引入js和css,vue的在它前面引入4externals: {\n+    vue: \"Vue\",\n+    // vuex: \"Vuex\",\n+    \"vue-router\": \"VueRouter\",\n+    axios: \"axios\",\n+    //自己额外使用的第三方包\n+    lodash: \"_\",\n+    echarts: \"echarts\",\n+    nprogress: \"NProgress\",\n+    \"vue-quill-editor\":'VueQuillEditor',\n+    \"element-ui\":\"ELEMENT\"\n+  },\n Vue.use(ELEMENT);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n"
+                },
+                {
+                    "date": 1644764225628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,18 +17,9 @@\n // import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n // Elementui引入,1把引入的elemenui和css注释掉,2Vue.use(ELEMENT)3在index.html中引入js和css,vue的在它前面引入4externals: {\n-    vue: \"Vue\",\n-    // vuex: \"Vuex\",\n-    \"vue-router\": \"VueRouter\",\n-    axios: \"axios\",\n-    //自己额外使用的第三方包\n-    lodash: \"_\",\n-    echarts: \"echarts\",\n-    nprogress: \"NProgress\",\n-    \"vue-quill-editor\":'VueQuillEditor',\n-    \"element-ui\":\"ELEMENT\"\n+   \"element-ui\":\"ELEMENT\"\n   },\n Vue.use(ELEMENT);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n"
+                },
+                {
+                    "date": 1644764237697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n // import 'quill/dist/quill.snow.css'\n // import 'quill/dist/quill.bubble.css'\n \n Vue.use(VueQuillEditor)\n-// Elementui引入,1把引入的elemenui和css注释掉,2Vue.use(ELEMENT)3在index.html中引入js和css,vue的在它前面引入4externals: {\"element-ui\":\"ELEMENT\"}.如果还是不行可以吧vue\n+// Elementui引入,1把引入的elemenui和css注释掉,2Vue.use(ELEMENT)3在index.html中引入js和css,vue的在它前面引入4externals: {\"element-ui\":\"ELEMENT\"}.如果还是不行可以吧vu\n Vue.use(ELEMENT);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n"
+                }
+            ],
+            "date": 1644748521424,
+            "name": "Commit-0",
+            "content": "import Vue from \"vue\";\nimport App from \"./App.vue\";\nimport router from \"./router\";\nimport ElementUI from \"element-ui\";\nimport treeTable from 'vue-table-with-tree-grid'\nimport api from './api/api.js'\nimport \"/node_modules/element-ui/lib/theme-chalk/index.css\";\nimport \"./assets/reset.css\";\nimport './assets/fonts/iconfont.css'\nimport * as fn from './plugins/index'\n\nimport VueQuillEditor from 'vue-quill-editor'\nimport 'nprogress/nprogress.css'\n// require styles\n// import 'quill/dist/quill.core.css'\n// import 'quill/dist/quill.snow.css'\n// import 'quill/dist/quill.bubble.css'\n\nVue.use(VueQuillEditor)\nVue.use(ElementUI);\nVue.component('tree-table',treeTable)\nVue.filter('dateFormat',function(orignVal){\n  const dt  =new Date(orignVal)\n  const y = dt.getFullYear();\n  const m = (dt.getMonth()+1+'').padStart(2,'0');\n  const d = (dt.getDate() + '').padStart(2,'0');\n  const hh = (dt.getHours()+'').padStart(2,'0')\n  const mm = (dt.getMinutes()+'').padStart(2,'0')\n  const ss = (dt.getSeconds()+'').padStart(2,'0')\n  // return `yyyy-mm-dd hh:mm:ss`\n  return `${y}-${m}-${d} ${hh}-${mm}-${ss}`\n})\nVue.prototype.$api = api\nVue.prototype.$fn = fn\nVue.config.productionTip = false;\nnew Vue({\n  router,\n  render: (h) => h(App),\n}).$mount(\"#app\");\n"
+        }
+    ]
+}

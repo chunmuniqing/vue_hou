@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/api/api.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1644732844636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1644732844636,
+            "name": "Commit-0",
+            "content": "import login from './login'\r\nimport home from './home'\r\nimport rights from './rights'\r\nimport shop from './shop'\r\nimport reports from './reports'\r\nexport default {\r\n  login,\r\n  home,\r\n  rights,\r\n  shop,\r\n  reports\r\n}"
+        }
+    ]
+}

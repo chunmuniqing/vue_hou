@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/api/reports.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1644732920268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1644732920268,
+            "name": "Commit-0",
+            "content": "import axios from './serves'\r\nfunction getReports(data){\r\n  return axios.get(`/reports/type/1`)\r\n}\r\n\r\n\r\nexport default {\r\n  getReports\r\n}"
+        }
+    ]
+}

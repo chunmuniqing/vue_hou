@@ -1,0 +1,138 @@
+{
+    "sourceFile": "src/components/Home/Reports/index.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 30,
+            "patches": [
+                {
+                    "date": 1644732038041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644732187120,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n       <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n       <el-breadcrumb-item>数据统计</el-breadcrumb-item>\r\n       <el-breadcrumb-item>数据报表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n+    \r\n   </div>\r\n </template>\r\n \r\n <script>\r\n"
+                },
+                {
+                    "date": 1644732303054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,15 +4,36 @@\n       <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n       <el-breadcrumb-item>数据统计</el-breadcrumb-item>\r\n       <el-breadcrumb-item>数据报表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n-    \r\n+    <div id=\"echarts\"></div>\r\n   </div>\r\n </template>\r\n \r\n <script>\r\n+import * as echarts from 'echarts'\r\n export default {\r\n-  name: 'Reports'\r\n+  name: 'Reports',\r\n+  mounted() {\r\n+    const myCharts = echarts.init(document.getElementById('echarts'))\r\n+    myChart.setOption({\r\n+      title: {\r\n+        text: 'ECharts 入门示例'\r\n+      },\r\n+      tooltip: {},\r\n+      xAxis: {\r\n+        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']\r\n+      },\r\n+      yAxis: {},\r\n+      series: [\r\n+        {\r\n+          name: '销量',\r\n+          type: 'bar',\r\n+          data: [5, 20, 36, 10, 10, 20]\r\n+        }\r\n+      ]\r\n+    })\r\n+  }\r\n }\r\n </script>\r\n \r\n <style  scoped>\r\n"
+                },
+                {
+                    "date": 1644732333383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n export default {\r\n   name: 'Reports',\r\n   mounted() {\r\n     const myCharts = echarts.init(document.getElementById('echarts'))\r\n-    myChart.setOption({\r\n+    myCharts.setOption({\r\n       title: {\r\n         text: 'ECharts 入门示例'\r\n       },\r\n       tooltip: {},\r\n"
+                },
+                {
+                    "date": 1644732420168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,18 +4,18 @@\n       <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n       <el-breadcrumb-item>数据统计</el-breadcrumb-item>\r\n       <el-breadcrumb-item>数据报表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n-    <div id=\"echarts\"></div>\r\n+    <div id=\"chart\"></div>\r\n   </div>\r\n </template>\r\n \r\n <script>\r\n import * as echarts from 'echarts'\r\n export default {\r\n   name: 'Reports',\r\n   mounted() {\r\n-    const myCharts = echarts.init(document.getElementById('echarts'))\r\n+    const myCharts = echarts.init(document.getElementById('chart'))\r\n     myCharts.setOption({\r\n       title: {\r\n         text: 'ECharts 入门示例'\r\n       },\r\n"
+                },
+                {
+                    "date": 1644732431540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n       <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n       <el-breadcrumb-item>数据统计</el-breadcrumb-item>\r\n       <el-breadcrumb-item>数据报表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n+    11\r\n     <div id=\"chart\"></div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1644732449034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n import * as echarts from 'echarts'\r\n export default {\r\n   name: 'Reports',\r\n   mounted() {\r\n-    const myCharts = echarts.init(document.getElementById('chart'))\r\n+    const myCharts = echarts.init(window.document.getElementById('chart'))\r\n     myCharts.setOption({\r\n       title: {\r\n         text: 'ECharts 入门示例'\r\n       },\r\n"
+                },
+                {
+                    "date": 1644732472898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n import * as echarts from 'echarts'\r\n export default {\r\n   name: 'Reports',\r\n   mounted() {\r\n-    const myCharts = echarts.init(window.document.getElementById('chart'))\r\n+    const myCharts = echarts.init(document.getElementById('chart'))\r\n     myCharts.setOption({\r\n       title: {\r\n         text: 'ECharts 入门示例'\r\n       },\r\n"
+                },
+                {
+                    "date": 1644732505985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,5 +37,9 @@\n }\r\n </script>\r\n \r\n <style  scoped>\r\n+#chart {\r\n+  width: 100%;\r\n+  height: 100%;\r\n+}\r\n </style>\r\n"
+                },
+                {
+                    "date": 1644732521834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,8 @@\n </script>\r\n \r\n <style  scoped>\r\n #chart {\r\n-  width: 100%;\r\n-  height: 100%;\r\n+  width: 200px;\r\n+  height: 200px;\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1644732540508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,8 @@\n </script>\r\n \r\n <style  scoped>\r\n #chart {\r\n-  width: 200px;\r\n-  height: 200px;\r\n+  width: 400px;\r\n+  height: 400px;\r\n }\r\n </style>\r\n"
+                },
+                {
+                    "date": 1644732609987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,34 @@\n </template>\r\n \r\n <script>\r\n import * as echarts from 'echarts'\r\n+import { BarChart } from 'echarts/charts';\r\n+// 引入提示框，标题，直角坐标系，数据集，内置数据转换器组件，组件后缀都为 Component\r\n+import {\r\n+  TitleComponent,\r\n+  TooltipComponent,\r\n+  GridComponent,\r\n+  DatasetComponent,\r\n+  TransformComponent\r\n+} from 'echarts/components';\r\n+// 标签自动布局，全局过渡动画等特性\r\n+import { LabelLayout, UniversalTransition } from 'echarts/features';\r\n+// 引入 Canvas 渲染器，注意引入 CanvasRenderer 或者 SVGRenderer 是必须的一步\r\n+import { CanvasRenderer } from 'echarts/renderers';\r\n+\r\n+// 注册必须的组件\r\n+echarts.use([\r\n+  TitleComponent,\r\n+  TooltipComponent,\r\n+  GridComponent,\r\n+  DatasetComponent,\r\n+  TransformComponent,\r\n+  BarChart,\r\n+  LabelLayout,\r\n+  UniversalTransition,\r\n+  CanvasRenderer\r\n+]);\r\n export default {\r\n   name: 'Reports',\r\n   mounted() {\r\n     const myCharts = echarts.init(document.getElementById('chart'))\r\n"
+                },
+                {
+                    "date": 1644732626346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,34 +11,8 @@\n </template>\r\n \r\n <script>\r\n import * as echarts from 'echarts'\r\n-import { BarChart } from 'echarts/charts';\r\n-// 引入提示框，标题，直角坐标系，数据集，内置数据转换器组件，组件后缀都为 Component\r\n-import {\r\n-  TitleComponent,\r\n-  TooltipComponent,\r\n-  GridComponent,\r\n-  DatasetComponent,\r\n-  TransformComponent\r\n-} from 'echarts/components';\r\n-// 标签自动布局，全局过渡动画等特性\r\n-import { LabelLayout, UniversalTransition } from 'echarts/features';\r\n-// 引入 Canvas 渲染器，注意引入 CanvasRenderer 或者 SVGRenderer 是必须的一步\r\n-import { CanvasRenderer } from 'echarts/renderers';\r\n-\r\n-// 注册必须的组件\r\n-echarts.use([\r\n-  TitleComponent,\r\n-  TooltipComponent,\r\n-  GridComponent,\r\n-  DatasetComponent,\r\n-  TransformComponent,\r\n-  BarChart,\r\n-  LabelLayout,\r\n-  UniversalTransition,\r\n-  CanvasRenderer\r\n-]);\r\n export default {\r\n   name: 'Reports',\r\n   mounted() {\r\n     const myCharts = echarts.init(document.getElementById('chart'))\r\n"
+                },
+                {
+                    "date": 1644733127553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,18 +4,31 @@\n       <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n       <el-breadcrumb-item>数据统计</el-breadcrumb-item>\r\n       <el-breadcrumb-item>数据报表</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n-    11\r\n     <div id=\"chart\"></div>\r\n   </div>\r\n </template>\r\n \r\n <script>\r\n import * as echarts from 'echarts'\r\n export default {\r\n   name: 'Reports',\r\n+  data(){return {\r\n+    reportsData:{}\r\n+  }},\r\n+  methods:{\r\n+    lineChart() {\r\n+      this.$api.reports.getReports().then(res=>{\r\n+        if(!this.$fn.error) return\r\n+        this.reportsData = res.data.options\r\n+        console.log(this.reportsData);\r\n+      })\r\n+    }\r\n+  },\r\n+\r\n   mounted() {\r\n+    this.lineChart()\r\n     const myCharts = echarts.init(document.getElementById('chart'))\r\n     myCharts.setOption({\r\n       title: {\r\n         text: 'ECharts 入门示例'\r\n"
+                },
+                {
+                    "date": 1644733162469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   methods:{\r\n     lineChart() {\r\n       this.$api.reports.getReports().then(res=>{\r\n         if(!this.$fn.error) return\r\n-        this.reportsData = res.data.options\r\n+        this.reportsData = res.data\r\n         console.log(this.reportsData);\r\n       })\r\n     }\r\n   },\r\n"
+                },
+                {
+                    "date": 1644733340878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,25 +28,9 @@\n \r\n   mounted() {\r\n     this.lineChart()\r\n     const myCharts = echarts.init(document.getElementById('chart'))\r\n-    myCharts.setOption({\r\n-      title: {\r\n-        text: 'ECharts 入门示例'\r\n-      },\r\n-      tooltip: {},\r\n-      xAxis: {\r\n-        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']\r\n-      },\r\n-      yAxis: {},\r\n-      series: [\r\n-        {\r\n-          name: '销量',\r\n-          type: 'bar',\r\n-          data: [5, 20, 36, 10, 10, 20]\r\n-        }\r\n-      ]\r\n-    })\r\n+    myCharts.setOption(this.reportsData)\r\n   }\r\n }\r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1644733535687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,19 +10,53 @@\n </template>\r\n \r\n <script>\r\n import * as echarts from 'echarts'\r\n+import _ from 'lodash'\r\n export default {\r\n   name: 'Reports',\r\n-  data(){return {\r\n-    reportsData:{}\r\n-  }},\r\n-  methods:{\r\n+  data() {\r\n+    return {\r\n+      reportsData: {},\r\n+      options: {\r\n+        title: {\r\n+          text: '用户来源'\r\n+        },\r\n+        tooltip: {\r\n+          trigger: 'axis',\r\n+          axisPointer: {\r\n+            type: 'cross',\r\n+            label: {\r\n+              backgroundColor: '#E9EEF3'\r\n+            }\r\n+          }\r\n+        },\r\n+        grid: {\r\n+          left: '3%',\r\n+          right: '4%',\r\n+          bottom: '3%',\r\n+          containLabel: true\r\n+        },\r\n+        xAxis: [\r\n+          {\r\n+            boundaryGap: false\r\n+          }\r\n+        ],\r\n+        yAxis: [\r\n+          {\r\n+            type: 'value'\r\n+          }\r\n+        ]\r\n+      }\r\n+    }\r\n+  },\r\n+  methods: {\r\n     lineChart() {\r\n-      this.$api.reports.getReports().then(res=>{\r\n-        if(!this.$fn.error) return\r\n-        this.reportsData = res.data\r\n-        console.log(this.reportsData);\r\n+      this.$api.reports.getReports().then((res) => {\r\n+        if (!this.$fn.error) return\r\n+        const result = _.merge(res.data,this.options)\r\n+        this.reportsData = result\r\n+        console.log(this.reportsData)\r\n       })\r\n     }\r\n   },\r\n \r\n"
+                },
+                {
+                    "date": 1644733617167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,11 +58,13 @@\n         console.log(this.reportsData)\r\n       })\r\n     }\r\n   },\r\n-\r\n+created(){\r\n+  this.lineChart()\r\n+},\r\n   mounted() {\r\n-    this.lineChart()\r\n+    \r\n     const myCharts = echarts.init(document.getElementById('chart'))\r\n     myCharts.setOption(this.reportsData)\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1644733693090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,23 +50,22 @@\n     }\r\n   },\r\n   methods: {\r\n     lineChart() {\r\n+      const myCharts = echarts.init(document.getElementById('chart'))\r\n       this.$api.reports.getReports().then((res) => {\r\n         if (!this.$fn.error) return\r\n-        const result = _.merge(res.data,this.options)\r\n+        const result = _.merge(res.data, this.options)\r\n         this.reportsData = result\r\n+\r\n+        myCharts.setOption(this.reportsData)\r\n         console.log(this.reportsData)\r\n       })\r\n     }\r\n   },\r\n-created(){\r\n-  this.lineChart()\r\n-},\r\n+  created() {},\r\n   mounted() {\r\n-    \r\n-    const myCharts = echarts.init(document.getElementById('chart'))\r\n-    myCharts.setOption(this.reportsData)\r\n+    this.lineChart()\r\n   }\r\n }\r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1644733827538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,13 +53,13 @@\n     lineChart() {\r\n       const myCharts = echarts.init(document.getElementById('chart'))\r\n       this.$api.reports.getReports().then((res) => {\r\n         if (!this.$fn.error) return\r\n+        \r\n         const result = _.merge(res.data, this.options)\r\n         this.reportsData = result\r\n-\r\n+        console.log(this.reportsData,111,res.data)\r\n         myCharts.setOption(this.reportsData)\r\n-        console.log(this.reportsData)\r\n       })\r\n     }\r\n   },\r\n   created() {},\r\n"
+                },
+                {
+                    "date": 1644733882903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,12 +53,12 @@\n     lineChart() {\r\n       const myCharts = echarts.init(document.getElementById('chart'))\r\n       this.$api.reports.getReports().then((res) => {\r\n         if (!this.$fn.error) return\r\n-        \r\n+        console.log(res.data);\r\n         const result = _.merge(res.data, this.options)\r\n         this.reportsData = result\r\n-        console.log(this.reportsData,111,res.data)\r\n+        console.log(this.reportsData,111)\r\n         myCharts.setOption(this.reportsData)\r\n       })\r\n     }\r\n   },\r\n"
+                },
+                {
+                    "date": 1644734139451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,11 @@\n       const myCharts = echarts.init(document.getElementById('chart'))\r\n       this.$api.reports.getReports().then((res) => {\r\n         if (!this.$fn.error) return\r\n         console.log(res.data);\r\n-        const result = _.merge(res.data, this.options)\r\n+        // const result = _.merge(res.data, this.options)\\\r\n+        const result = Object.assign({},res.data, this.options)\r\n+\r\n         this.reportsData = result\r\n         console.log(this.reportsData,111)\r\n         myCharts.setOption(this.reportsData)\r\n       })\r\n"
+                },
+                {
+                    "date": 1644734206055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,10 @@\n       this.$api.reports.getReports().then((res) => {\r\n         if (!this.$fn.error) return\r\n         console.log(res.data);\r\n         // const result = _.merge(res.data, this.options)\\\r\n-        const result = Object.assign({},res.data, this.options)\r\n+        let result \r\n+        Object.assign(result,res.data, this.options)\r\n \r\n         this.reportsData = result\r\n         console.log(this.reportsData,111)\r\n         myCharts.setOption(this.reportsData)\r\n"
+                },
+                {
+                    "date": 1644734219376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n       this.$api.reports.getReports().then((res) => {\r\n         if (!this.$fn.error) return\r\n         console.log(res.data);\r\n         // const result = _.merge(res.data, this.options)\\\r\n-        let result \r\n+        let result ={}\r\n         Object.assign(result,res.data, this.options)\r\n \r\n         this.reportsData = result\r\n         console.log(this.reportsData,111)\r\n"
+                },
+                {
+                    "date": 1644734297133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,10 +55,9 @@\n       this.$api.reports.getReports().then((res) => {\r\n         if (!this.$fn.error) return\r\n         console.log(res.data);\r\n         // const result = _.merge(res.data, this.options)\\\r\n-        let result ={}\r\n-        Object.assign(result,res.data, this.options)\r\n+        let result =$.extend({},res.data, this.options)\r\n \r\n         this.reportsData = result\r\n         console.log(this.reportsData,111)\r\n         myCharts.setOption(this.reportsData)\r\n"
+                },
+                {
+                    "date": 1644734402857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,10 +54,9 @@\n       const myCharts = echarts.init(document.getElementById('chart'))\r\n       this.$api.reports.getReports().then((res) => {\r\n         if (!this.$fn.error) return\r\n         console.log(res.data);\r\n-        // const result = _.merge(res.data, this.options)\\\r\n-        let result =$.extend({},res.data, this.options)\r\n+        const result = _.merge(res.data, this.options)\r\n \r\n         this.reportsData = result\r\n         console.log(this.reportsData,111)\r\n         myCharts.setOption(this.reportsData)\r\n"
+                },
+                {
+                    "date": 1644734508929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,20 +53,31 @@\n     lineChart() {\r\n       const myCharts = echarts.init(document.getElementById('chart'))\r\n       this.$api.reports.getReports().then((res) => {\r\n         if (!this.$fn.error) return\r\n-        console.log(res.data);\r\n+        console.log(res.data)\r\n         const result = _.merge(res.data, this.options)\r\n-\r\n         this.reportsData = result\r\n-        console.log(this.reportsData,111)\r\n         myCharts.setOption(this.reportsData)\r\n       })\r\n+    },\r\n+    fn() {\r\n+      var object = {\r\n+        a: [{ b: 2 }, { d: 4 }]\r\n+      }\r\n+\r\n+      var other = {\r\n+        a: [{ c: 3 }, { e: 5 },{ b: 2 }, { d: 4 }]\r\n+      }\r\n+\r\n+      let a = _.merge(object, other)\r\n+      console.log(a,11111);\r\n     }\r\n   },\r\n   created() {},\r\n   mounted() {\r\n     this.lineChart()\r\n+    this.fn()\r\n   }\r\n }\r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1644734535827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,8 @@\n     lineChart() {\r\n       const myCharts = echarts.init(document.getElementById('chart'))\r\n       this.$api.reports.getReports().then((res) => {\r\n         if (!this.$fn.error) return\r\n-        console.log(res.data)\r\n         const result = _.merge(res.data, this.options)\r\n         this.reportsData = result\r\n         myCharts.setOption(this.reportsData)\r\n       })\r\n"
+                },
+                {
+                    "date": 1644734583718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,10 +67,10 @@\n       var other = {\r\n         a: [{ c: 3 }, { e: 5 },{ b: 2 }, { d: 4 }]\r\n       }\r\n \r\n-      let a = _.merge(object, other)\r\n-      console.log(a,11111);\r\n+      let aaa = _.merge(object, other)\r\n+      console.log(aaa,11111);\r\n     }\r\n   },\r\n   created() {},\r\n   mounted() {\r\n"
+                },
+                {
+                    "date": 1644734712275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n         a: [{ c: 3 }, { e: 5 },{ b: 2 }, { d: 4 }]\r\n       }\r\n \r\n       let aaa = _.merge(object, other)\r\n-      console.log(aaa,11111);\r\n+      console.log(aaa,11111,object);\r\n     }\r\n   },\r\n   created() {},\r\n   mounted() {\r\n"
+                },
+                {
+                    "date": 1644735063791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,32 +57,19 @@\n         const result = _.merge(res.data, this.options)\r\n         this.reportsData = result\r\n         myCharts.setOption(this.reportsData)\r\n       })\r\n-    },\r\n-    fn() {\r\n-      var object = {\r\n-        a: [{ b: 2 }, { d: 4 }]\r\n-      }\r\n-\r\n-      var other = {\r\n-        a: [{ c: 3 }, { e: 5 },{ b: 2 }, { d: 4 }]\r\n-      }\r\n-\r\n-      let aaa = _.merge(object, other)\r\n-      console.log(aaa,11111,object);\r\n     }\r\n   },\r\n   created() {},\r\n   mounted() {\r\n     this.lineChart()\r\n-    this.fn()\r\n   }\r\n }\r\n </script>\r\n \r\n <style  scoped>\r\n #chart {\r\n-  width: 400px;\r\n+  width: 800px;\r\n   height: 400px;\r\n }\r\n </style>\r\n"
+                }
+            ],
+            "date": 1644732038041,
+            "name": "Commit-0",
+            "content": "<template>\r\n  <div>\r\n    <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n      <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n      <el-breadcrumb-item>数据统计</el-breadcrumb-item>\r\n      <el-breadcrumb-item>数据报表</el-breadcrumb-item>\r\n    </el-breadcrumb>\r\n  </div>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n  name: 'Reports'\r\n}\r\n</script>\r\n\r\n<style  scoped>\r\n</style>\r\n"
+        }
+    ]
+}

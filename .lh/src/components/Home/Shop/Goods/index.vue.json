@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/components/Home/Shop/Goods/index.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1644596681896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644596734616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   <div>\r\n     <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n       <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n       <el-breadcrumb-item :to=\"{ path: '/goods' }\">商品管理</el-breadcrumb-item>\r\n-      <el-breadcrumb-item>商品分类</el-breadcrumb-item>\r\n+      <el-breadcrumb-item :to=\"{ path: '/goods/add' }\">商品分类</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n       <el-button type=\"primary\" @click=\"addCommodity\">添加商品</el-button>\r\n     <router-link to=\"/goods/home\" active-class=\"active\">home</router-link>\r\n     <router-link to=\"/goods/about\" active-class=\"active\">about</router-link>\r\n"
+                },
+                {
+                    "date": 1644596790463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     </el-breadcrumb>\r\n       <el-button type=\"primary\" @click=\"addCommodity\">添加商品</el-button>\r\n     <router-link to=\"/goods/home\" active-class=\"active\">home</router-link>\r\n     <router-link to=\"/goods/about\" active-class=\"active\">about</router-link>\r\n-    <keep-alive >\r\n+    <keep-alive exclude=\"add\">\r\n       <router-view></router-view>\r\n     </keep-alive>\r\n   </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1644596797060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     </el-breadcrumb>\r\n       <el-button type=\"primary\" @click=\"addCommodity\">添加商品</el-button>\r\n     <router-link to=\"/goods/home\" active-class=\"active\">home</router-link>\r\n     <router-link to=\"/goods/about\" active-class=\"active\">about</router-link>\r\n-    <keep-alive exclude=\"add\">\r\n+    <keep-alive exclude=\"Add\">\r\n       <router-view></router-view>\r\n     </keep-alive>\r\n   </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1644597015418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n       <el-breadcrumb-item :to=\"{ path: '/goods' }\">商品管理</el-breadcrumb-item>\r\n       <el-breadcrumb-item :to=\"{ path: '/goods/add' }\">商品分类</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n       <el-button type=\"primary\" @click=\"addCommodity\">添加商品</el-button>\r\n-    <router-link to=\"/goods/home\" active-class=\"active\">home</router-link>\r\n-    <router-link to=\"/goods/about\" active-class=\"active\">about</router-link>\r\n+    <!-- <router-link to=\"/goods/home\" active-class=\"active\">home</router-link>\r\n+    <router-link to=\"/goods/about\" active-class=\"active\">about</router-link> -->\r\n     <keep-alive exclude=\"Add\">\r\n       <router-view></router-view>\r\n     </keep-alive>\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1644597064155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n export default {\r\n   name: 'Goods',\r\n  methods:{\r\n     addCommodity(){\r\n-      this.$router.push({name:'add'})\r\n+      this.$router.push('/goods/add')\r\n     }\r\n  }\r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1644597070796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n export default {\r\n   name: 'Goods',\r\n  methods:{\r\n     addCommodity(){\r\n-      this.$router.push('/goods/add')\r\n+      this.$router.push({name:'add'})\r\n     }\r\n  }\r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1644597491316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   <div>\r\n     <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n       <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n       <el-breadcrumb-item :to=\"{ path: '/goods' }\">商品管理</el-breadcrumb-item>\r\n-      <el-breadcrumb-item :to=\"{ path: '/goods/add' }\">商品分类</el-breadcrumb-item>\r\n+      <el-breadcrumb-item :to=\"{ path: '/goods/add' }\" exact>商品分类</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n       <el-button type=\"primary\" @click=\"addCommodity\">添加商品</el-button>\r\n     <!-- <router-link to=\"/goods/home\" active-class=\"active\">home</router-link>\r\n     <router-link to=\"/goods/about\" active-class=\"active\">about</router-link> -->\r\n"
+                },
+                {
+                    "date": 1644597564603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   <div>\r\n     <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n       <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n       <el-breadcrumb-item :to=\"{ path: '/goods' }\">商品管理</el-breadcrumb-item>\r\n-      <el-breadcrumb-item :to=\"{ path: '/goods/add' }\" exact>商品分类</el-breadcrumb-item>\r\n+      <el-breadcrumb-item :to=\"{ path: '/goods/add',exact }\" >商品分类</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n       <el-button type=\"primary\" @click=\"addCommodity\">添加商品</el-button>\r\n     <!-- <router-link to=\"/goods/home\" active-class=\"active\">home</router-link>\r\n     <router-link to=\"/goods/about\" active-class=\"active\">about</router-link> -->\r\n"
+                },
+                {
+                    "date": 1644597581948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   <div>\r\n     <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n       <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n       <el-breadcrumb-item :to=\"{ path: '/goods' }\">商品管理</el-breadcrumb-item>\r\n-      <el-breadcrumb-item :to=\"{ path: '/goods/add',exact }\" >商品分类</el-breadcrumb-item>\r\n+      <el-breadcrumb-item :to=\"{ path: '/goods/add',exact:'true' }\" >商品分类</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n       <el-button type=\"primary\" @click=\"addCommodity\">添加商品</el-button>\r\n     <!-- <router-link to=\"/goods/home\" active-class=\"active\">home</router-link>\r\n     <router-link to=\"/goods/about\" active-class=\"active\">about</router-link> -->\r\n"
+                },
+                {
+                    "date": 1644597641975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n       <el-breadcrumb-item :to=\"{ path: '/goods' }\">商品管理</el-breadcrumb-item>\r\n       <el-breadcrumb-item :to=\"{ path: '/goods/add',exact:'true' }\" >商品分类</el-breadcrumb-item>\r\n     </el-breadcrumb>\r\n       <el-button type=\"primary\" @click=\"addCommodity\">添加商品</el-button>\r\n-    <!-- <router-link to=\"/goods/home\" active-class=\"active\">home</router-link>\r\n-    <router-link to=\"/goods/about\" active-class=\"active\">about</router-link> -->\r\n+    <router-link to=\"/goods/home\" active-class=\"active\">home</router-link>\r\n+    <router-link to=\"/goods/about\" active-class=\"active\">about</router-link>\r\n     <keep-alive exclude=\"Add\">\r\n       <router-view></router-view>\r\n     </keep-alive>\r\n   </div>\r\n"
+                }
+            ],
+            "date": 1644596681896,
+            "name": "Commit-0",
+            "content": "<template>\r\n  <div>\r\n    <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n      <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n      <el-breadcrumb-item :to=\"{ path: '/goods' }\">商品管理</el-breadcrumb-item>\r\n      <el-breadcrumb-item>商品分类</el-breadcrumb-item>\r\n    </el-breadcrumb>\r\n      <el-button type=\"primary\" @click=\"addCommodity\">添加商品</el-button>\r\n    <router-link to=\"/goods/home\" active-class=\"active\">home</router-link>\r\n    <router-link to=\"/goods/about\" active-class=\"active\">about</router-link>\r\n    <keep-alive >\r\n      <router-view></router-view>\r\n    </keep-alive>\r\n  </div>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n  name: 'Goods',\r\n methods:{\r\n    addCommodity(){\r\n      this.$router.push({name:'add'})\r\n    }\r\n }\r\n}\r\n</script>\r\n\r\n<style  scoped>\r\n.active {\r\n  color:green!important;\r\n}\r\n</style>\r\n"
+        }
+    ]
+}

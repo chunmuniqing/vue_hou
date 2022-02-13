@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/components/Home/Shop/Goods/about.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1644595616915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644595665632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-  <div><h1>about</h1><Message></Message><h3>{{new Date() | dataFormat}}</h3></div>\r\n+  <div><h1>about</h1><Message></Message><h3>{{Date.parse(new Date()) | dataFormat}}</h3></div>\r\n </template>\r\n \r\n <script>\r\n import Message from './message.vue'\r\n"
+                },
+                {
+                    "date": 1644595692821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-  <div><h1>about</h1><Message></Message><h3>{{Date.parse(new Date()) | dataFormat}}</h3></div>\r\n+  <div><h1>about</h1><Message></Message><h3>{{Date.parse(new Date()) | dateFormat}}</h3></div>\r\n </template>\r\n \r\n <script>\r\n import Message from './message.vue'\r\n"
+                },
+                {
+                    "date": 1644595869578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import Message from './message.vue'\r\n export default {\r\n   name: 'about',\r\n   data(){\r\n-\r\n+return{}\r\n   },\r\n   beforeDestroy(){\r\n     console.log('about被销毁');\r\n   },\r\n"
+                },
+                {
+                    "date": 1644596043352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,29 +1,31 @@\n <template>\r\n-  <div><h1>about</h1><Message></Message><h3>{{Date.parse(new Date()) | dateFormat}}</h3></div>\r\n+  <div>\r\n+    <h1>about</h1>\r\n+    <Message></Message>\r\n+    <h3>{{ Date.parse(new Date()) | dateFormat }}</h3>\r\n+  </div>\r\n </template>\r\n \r\n <script>\r\n import Message from './message.vue'\r\n export default {\r\n   name: 'about',\r\n-  data(){\r\n-return{}\r\n+  data() {\r\n+    return {}\r\n   },\r\n-  beforeDestroy(){\r\n-    console.log('about被销毁');\r\n+  beforeDestroy() {\r\n+    console.log('about被销毁')\r\n   },\r\n-  mounted(){\r\n-    console.log('about被挂载',this);\r\n-    window.aboutRoute=this.$route\r\n-    window.aboutRouter=this.$router\r\n+  mounted() {\r\n+    console.log('about被挂载', this)\r\n+    window.aboutRoute = this.$route\r\n+    window.aboutRouter = this.$router\r\n   },\r\n-  components:{\r\n+  components: {\r\n     Message\r\n-  },\r\n-   \r\n+  }\r\n }\r\n </script>\r\n \r\n <style  scoped>\r\n-\r\n </style>\r\n"
+                },
+                {
+                    "date": 1644596493572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,16 @@\n <template>\r\n   <div>\r\n+    <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n+      <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n+      <el-breadcrumb-item :to=\"{ path: '/goods' }\">商品管理</el-breadcrumb-item>\r\n+      <el-breadcrumb-item>商品分类</el-breadcrumb-item>\r\n+    </el-breadcrumb>\r\n+\r\n     <h1>about</h1>\r\n     <Message></Message>\r\n     <h3>{{ Date.parse(new Date()) | dateFormat }}</h3>\r\n+    <el-button type=\"primary\" @click=\"addCommodity\">添加商品</el-button>\r\n   </div>\r\n </template>\r\n \r\n <script>\r\n@@ -22,8 +29,13 @@\n     window.aboutRouter = this.$router\r\n   },\r\n   components: {\r\n     Message\r\n+  },\r\n+  methods:{\r\n+    addCommodity(){\r\n+      this.$router.push({name:'add'})\r\n+    }\r\n   }\r\n }\r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1644596890874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,12 @@\n <template>\r\n   <div>\r\n-    <el-breadcrumb separator-class=\"el-icon-arrow-right\">\r\n-      <el-breadcrumb-item :to=\"{ path: '/home' }\">首页</el-breadcrumb-item>\r\n-      <el-breadcrumb-item :to=\"{ path: '/goods' }\">商品管理</el-breadcrumb-item>\r\n-      <el-breadcrumb-item>商品分类</el-breadcrumb-item>\r\n-    </el-breadcrumb>\r\n+    \r\n \r\n     <h1>about</h1>\r\n     <Message></Message>\r\n     <h3>{{ Date.parse(new Date()) | dateFormat }}</h3>\r\n-    <el-button type=\"primary\" @click=\"addCommodity\">添加商品</el-button>\r\n+  \r\n   </div>\r\n </template>\r\n \r\n <script>\r\n@@ -31,11 +27,9 @@\n   components: {\r\n     Message\r\n   },\r\n   methods:{\r\n-    addCommodity(){\r\n-      this.$router.push({name:'add'})\r\n-    }\r\n+   \r\n   }\r\n }\r\n </script>\r\n \r\n"
+                }
+            ],
+            "date": 1644595616915,
+            "name": "Commit-0",
+            "content": "<template>\r\n  <div><h1>about</h1><Message></Message><h3>{{new Date() | dataFormat}}</h3></div>\r\n</template>\r\n\r\n<script>\r\nimport Message from './message.vue'\r\nexport default {\r\n  name: 'about',\r\n  data(){\r\n\r\n  },\r\n  beforeDestroy(){\r\n    console.log('about被销毁');\r\n  },\r\n  mounted(){\r\n    console.log('about被挂载',this);\r\n    window.aboutRoute=this.$route\r\n    window.aboutRouter=this.$router\r\n  },\r\n  components:{\r\n    Message\r\n  },\r\n   \r\n}\r\n</script>\r\n\r\n<style  scoped>\r\n\r\n</style>\r\n"
+        }
+    ]
+}

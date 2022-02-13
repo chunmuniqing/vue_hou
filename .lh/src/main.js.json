@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1644595479669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644595691315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n import * as fn from './plugins/index'\n \n Vue.use(ElementUI);\n Vue.component('tree-table',treeTable)\n-Vue.filter('data-format',orignVal=>{\n+Vue.filter('date-format',orignVal=>{\n   const dt  =new Date(orignVal)\n   const y = dt.getFullYear();\n   const m = (dt.getMonth()+1+'').padStart(2,'0');\n   const d = (dt.getDate() + '').padStart(2,'0');\n"
+                },
+                {
+                    "date": 1644595952063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n import * as fn from './plugins/index'\n \n Vue.use(ElementUI);\n Vue.component('tree-table',treeTable)\n-Vue.filter('date-format',orignVal=>{\n+Vue.filter('date-format',function(orignVal){\n   const dt  =new Date(orignVal)\n   const y = dt.getFullYear();\n   const m = (dt.getMonth()+1+'').padStart(2,'0');\n   const d = (dt.getDate() + '').padStart(2,'0');\n"
+                },
+                {
+                    "date": 1644595993468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,13 @@\n import * as fn from './plugins/index'\n \n Vue.use(ElementUI);\n Vue.component('tree-table',treeTable)\n+\n+Vue.prototype.$api = api\n+Vue.prototype.$fn = fn\n+\n+Vue.config.productionTip = false;\n Vue.filter('date-format',function(orignVal){\n   const dt  =new Date(orignVal)\n   const y = dt.getFullYear();\n   const m = (dt.getMonth()+1+'').padStart(2,'0');\n@@ -21,11 +26,8 @@\n   const ss = (dt.getSeconds()+'').padStart(2,'0')\n   // return `yyyy-mm-dd hh:mm:ss`\n   return `${y}-${m}-${d} ${hh}-${mm}-${ss}`\n })\n-Vue.prototype.$api = api\n-Vue.prototype.$fn = fn\n-Vue.config.productionTip = false;\n new Vue({\n   router,\n   render: (h) => h(App),\n }).$mount(\"#app\");\n"
+                },
+                {
+                    "date": 1644596008085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n Vue.prototype.$api = api\n Vue.prototype.$fn = fn\n \n Vue.config.productionTip = false;\n-Vue.filter('date-format',function(orignVal){\n+Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n   const y = dt.getFullYear();\n   const m = (dt.getMonth()+1+'').padStart(2,'0');\n   const d = (dt.getDate() + '').padStart(2,'0');\n"
+                },
+                {
+                    "date": 1644596023527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,14 +10,9 @@\n import * as fn from './plugins/index'\n \n Vue.use(ElementUI);\n Vue.component('tree-table',treeTable)\n-\n-Vue.prototype.$api = api\n-Vue.prototype.$fn = fn\n-\n-Vue.config.productionTip = false;\n-Vue.filter('dateFormat',function(orignVal){\n+Vue.filter('date-format',function(orignVal){\n   const dt  =new Date(orignVal)\n   const y = dt.getFullYear();\n   const m = (dt.getMonth()+1+'').padStart(2,'0');\n   const d = (dt.getDate() + '').padStart(2,'0');\n@@ -26,8 +21,11 @@\n   const ss = (dt.getSeconds()+'').padStart(2,'0')\n   // return `yyyy-mm-dd hh:mm:ss`\n   return `${y}-${m}-${d} ${hh}-${mm}-${ss}`\n })\n+Vue.prototype.$api = api\n+Vue.prototype.$fn = fn\n+Vue.config.productionTip = false;\n new Vue({\n   router,\n   render: (h) => h(App),\n }).$mount(\"#app\");\n"
+                },
+                {
+                    "date": 1644596029895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n import * as fn from './plugins/index'\n \n Vue.use(ElementUI);\n Vue.component('tree-table',treeTable)\n-Vue.filter('date-format',function(orignVal){\n+Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n   const y = dt.getFullYear();\n   const m = (dt.getMonth()+1+'').padStart(2,'0');\n   const d = (dt.getDate() + '').padStart(2,'0');\n"
+                },
+                {
+                    "date": 1644608560274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,17 @@\n import \"./assets/reset.css\";\n import './assets/fonts/iconfont.css'\n import * as fn from './plugins/index'\n \n+import Vue from 'vue'\n+import VueQuillEditor from 'vue-quill-editor'\n+\n+// require styles\n+import 'quill/dist/quill.core.css'\n+import 'quill/dist/quill.snow.css'\n+import 'quill/dist/quill.bubble.css'\n+\n+Vue.use(VueQuillEditor, /* { default global options } */)\n Vue.use(ElementUI);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n"
+                },
+                {
+                    "date": 1644608748667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,8 @@\n import \"./assets/reset.css\";\n import './assets/fonts/iconfont.css'\n import * as fn from './plugins/index'\n \n-import Vue from 'vue'\n import VueQuillEditor from 'vue-quill-editor'\n \n // require styles\n import 'quill/dist/quill.core.css'\n"
+                },
+                {
+                    "date": 1644608776938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n import 'quill/dist/quill.core.css'\n import 'quill/dist/quill.snow.css'\n import 'quill/dist/quill.bubble.css'\n \n-Vue.use(VueQuillEditor, /* { default global options } */)\n+Vue.use(VueQuillEditor)\n Vue.use(ElementUI);\n Vue.component('tree-table',treeTable)\n Vue.filter('dateFormat',function(orignVal){\n   const dt  =new Date(orignVal)\n"
+                }
+            ],
+            "date": 1644595479669,
+            "name": "Commit-0",
+            "content": "import Vue from \"vue\";\nimport App from \"./App.vue\";\nimport router from \"./router\";\nimport ElementUI from \"element-ui\";\nimport treeTable from 'vue-table-with-tree-grid'\nimport api from './api/api.js'\nimport \"/node_modules/element-ui/lib/theme-chalk/index.css\";\nimport \"./assets/reset.css\";\nimport './assets/fonts/iconfont.css'\nimport * as fn from './plugins/index'\n\nVue.use(ElementUI);\nVue.component('tree-table',treeTable)\nVue.filter('data-format',orignVal=>{\n  const dt  =new Date(orignVal)\n  const y = dt.getFullYear();\n  const m = (dt.getMonth()+1+'').padStart(2,'0');\n  const d = (dt.getDate() + '').padStart(2,'0');\n  const hh = (dt.getHours()+'').padStart(2,'0')\n  const mm = (dt.getMinutes()+'').padStart(2,'0')\n  const ss = (dt.getSeconds()+'').padStart(2,'0')\n  // return `yyyy-mm-dd hh:mm:ss`\n  return `${y}-${m}-${d} ${hh}-${mm}-${ss}`\n})\nVue.prototype.$api = api\nVue.prototype.$fn = fn\nVue.config.productionTip = false;\nnew Vue({\n  router,\n  render: (h) => h(App),\n}).$mount(\"#app\");\n"
+        }
+    ]
+}

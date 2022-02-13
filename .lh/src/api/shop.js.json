@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/api/shop.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1644600461128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644610102128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,11 @@\n }\r\n function getGoods(data){\r\n   return axios.get(`/goods`,data)\r\n }\r\n+function getAddGoods(data){\r\n+  return axios.post(`/goods`,data)\r\n+}\r\n export default {\r\n   goCategoriesList,\r\n   getAddCategories,\r\n   getDelCategories,\r\n@@ -38,6 +41,7 @@\n   getEditAttribute,\r\n   editAttribute,\r\n   delAttribute,\r\n   editOneAttribute,\r\n-  getGoods\r\n+  getGoods,\r\n+  getAddGoods\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1644600461128,
+            "name": "Commit-0",
+            "content": "import axios from './serves'\r\nfunction goCategoriesList(data){\r\n  return axios.get('/categories',{params:data})\r\n}\r\nfunction getAddCategories(data){\r\n  return axios.post('/categories',data)\r\n}\r\nfunction getDelCategories(id){\r\n  return axios.delete(`/categories/${id}`)\r\n}\r\nfunction getAttributes(data){\r\n  return axios.get(`categories/${data.id}/attributes`,{params:{sel:data.sel}})\r\n}\r\nfunction getAddAttribute(data){\r\n  return axios.post(`categories/${data.cat_id}/attributes`,{attr_name:data.attr_name,attr_sel:data.attr_sel})\r\n}\r\nfunction getEditAttribute(data){\r\n  return axios.get(`categories/${data.id}/attributes/${data.attrId}`,{attr_sel:data.attr_sel})\r\n}\r\nfunction editAttribute(data){\r\n  return axios.put(`categories/${data.cat_id}/attributes/${data.attr_id}`,data)\r\n}\r\nfunction delAttribute(data){\r\n  return axios.delete(`categories/${data.cat_id}/attributes/${data.attr_id}`)\r\n}\r\nfunction editOneAttribute(data){\r\n  return axios.put(`categories/${data.id}/attributes/${data.attrId}`,{attr_name:data.attr_name,attr_sel:data.attr_sel,attr_vals:data.attr_vals})\r\n}\r\nfunction getGoods(data){\r\n  return axios.get(`/goods`,data)\r\n}\r\nexport default {\r\n  goCategoriesList,\r\n  getAddCategories,\r\n  getDelCategories,\r\n  getAttributes,\r\n  getAddAttribute,\r\n  getEditAttribute,\r\n  editAttribute,\r\n  delAttribute,\r\n  editOneAttribute,\r\n  getGoods\r\n}"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "sourceFile": "public/index.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1644737832866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644738325898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,14 +16,6 @@\n         continue.</strong\n       >\n     </noscript>\n     <div id=\"app\"></div>\n-    <!--循环引入-->\n-    <% for (var i in htmlWebpackPlugin.options.cdn &&\n-    htmlWebpackPlugin.options.cdn.js) { %>\n-    <script\n-      src=\"<%= htmlWebpackPlugin.options.cdn.js[i] %>\"\n-      crossorigin=\"anonymous\"\n-    ></script>\n-    <% } %>\n   </body>\n </html>\n"
+                },
+                {
+                    "date": 1644739051569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,14 @@\n         continue.</strong\n       >\n     </noscript>\n     <div id=\"app\"></div>\n+    <!--循环引入-->\n+    <% for (var i in htmlWebpackPlugin.options.cdn &&\n+    htmlWebpackPlugin.options.cdn.js) { %>\n+    <script\n+      src=\"<%= htmlWebpackPlugin.options.cdn.js[i] %>\"\n+      crossorigin=\"anonymous\"\n+    ></script>\n+    <% } %>\n   </body>\n </html>\n"
+                },
+                {
+                    "date": 1644748012785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,12 @@\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n     <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\" />\n     <link rel=\"icon\" href=\"<%= BASE_URL %>favicon.ico\" />\n     <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->\n+    <% for(var i in\n+    htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.css) { %>\n+    <link rel=\"stylesheet\" href=\"<%=htmlWebpackPlugin.options.cdn.css[i] %>\" />\n+    <% } %>\n     <title>vue后台管理系统</title>\n   </head>\n   <body>\n     <noscript>\n"
+                },
+                {
+                    "date": 1644750171783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,12 @@\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n     <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\" />\n     <link rel=\"icon\" href=\"<%= BASE_URL %>favicon.ico\" />\n     <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->\n-    <% for(var i in\n+    <!-- <% for(var i in\n     htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.css) { %>\n     <link rel=\"stylesheet\" href=\"<%=htmlWebpackPlugin.options.cdn.css[i] %>\" />\n-    <% } %>\n+    <% } %> -->\n     <title>vue后台管理系统</title>\n   </head>\n   <body>\n     <noscript>\n"
+                },
+                {
+                    "date": 1644750203055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,12 @@\n     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n     <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\" />\n     <link rel=\"icon\" href=\"<%= BASE_URL %>favicon.ico\" />\n     <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->\n-    <!-- <% for(var i in\n+    <% for(var i in\n     htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.css) { %>\n     <link rel=\"stylesheet\" href=\"<%=htmlWebpackPlugin.options.cdn.css[i] %>\" />\n-    <% } %> -->\n+    <% } %>\n     <title>vue后台管理系统</title>\n   </head>\n   <body>\n     <noscript>\n"
+                },
+                {
+                    "date": 1644752635647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <% for(var i in\n     htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.css) { %>\n     <link rel=\"stylesheet\" href=\"<%=htmlWebpackPlugin.options.cdn.css[i] %>\" />\n     <% } %>\n-    <title>vue后台管理系统</title>\n+    <title><>vue后台管理系统</title>\n   </head>\n   <body>\n     <noscript>\n       <strong\n"
+                },
+                {
+                    "date": 1644752642620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <% for(var i in\n     htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.css) { %>\n     <link rel=\"stylesheet\" href=\"<%=htmlWebpackPlugin.options.cdn.css[i] %>\" />\n     <% } %>\n-    <title><>vue后台管理系统</title>\n+    <title><%= %>vue后台管理系统</title>\n   </head>\n   <body>\n     <noscript>\n       <strong\n"
+                },
+                {
+                    "date": 1644752650479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <% for(var i in\n     htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.css) { %>\n     <link rel=\"stylesheet\" href=\"<%=htmlWebpackPlugin.options.cdn.css[i] %>\" />\n     <% } %>\n-    <title><%= %>vue后台管理系统</title>\n+    <title><%= htmlWebpa%>vue后台管理系统</title>\n   </head>\n   <body>\n     <noscript>\n       <strong\n"
+                },
+                {
+                    "date": 1644752657095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <% for(var i in\n     htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.css) { %>\n     <link rel=\"stylesheet\" href=\"<%=htmlWebpackPlugin.options.cdn.css[i] %>\" />\n     <% } %>\n-    <title><%= htmlWebpa%>vue后台管理系统</title>\n+    <title><%= htmlWebpackPlugin%>vue后台管理系统</title>\n   </head>\n   <body>\n     <noscript>\n       <strong\n"
+                },
+                {
+                    "date": 1644752663758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <% for(var i in\n     htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.css) { %>\n     <link rel=\"stylesheet\" href=\"<%=htmlWebpackPlugin.options.cdn.css[i] %>\" />\n     <% } %>\n-    <title><%= htmlWebpackPlugin%>vue后台管理系统</title>\n+    <title><%= htmlWebpackPlugin.%>vue后台管理系统</title>\n   </head>\n   <body>\n     <noscript>\n       <strong\n"
+                },
+                {
+                    "date": 1644752669248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     <% for(var i in\n     htmlWebpackPlugin.options.cdn&&htmlWebpackPlugin.options.cdn.css) { %>\n     <link rel=\"stylesheet\" href=\"<%=htmlWebpackPlugin.options.cdn.css[i] %>\" />\n     <% } %>\n-    <title><%= htmlWebpackPlugin.options.%>vue后台管理系统</title>\n+    <title><%= htmlWebpackPlugin.options.i%>vue后台管理系统</title>\n   </head>\n   <body>\n     <noscript>\n       <strong\n"
+                }
+            ],
+            "date": 1644737832866,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\" />\n    <link rel=\"icon\" href=\"<%= BASE_URL %>favicon.ico\" />\n    <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->\n    <title>vue后台管理系统</title>\n  </head>\n  <body>\n    <noscript>\n      <strong\n        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work\n        properly without JavaScript enabled. Please enable it to\n        continue.</strong\n      >\n    </noscript>\n    <div id=\"app\"></div>\n    <!--循环引入-->\n    <% for (var i in htmlWebpackPlugin.options.cdn &&\n    htmlWebpackPlugin.options.cdn.js) { %>\n    <script\n      src=\"<%= htmlWebpackPlugin.options.cdn.js[i] %>\"\n      crossorigin=\"anonymous\"\n    ></script>\n    <% } %>\n  </body>\n</html>\n"
+        }
+    ]
+}
